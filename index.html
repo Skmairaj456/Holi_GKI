@@ -4,19 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nalgonda Biggest Rang – Holi Fest 2026</title>
-    <!-- Google font for festive typography -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700;800&display=swap" rel="stylesheet">
+    <!-- Google fonts: display for hero, body for rest -->
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&family=Poppins:wght@300;500;600;700;800&display=swap" rel="stylesheet">
     <!-- NOTE: run `npm run build:css` or `npm run watch:css` before opening this page
          so that Tailwind-generated styles.css is available. -->
     <!-- Tailwind CSS built locally; run `npm run build:css` to generate styles.css -->
     <link rel="stylesheet" href="styles.css">
 </head>
-<body class="bg-gradient-to-r from-pink-300 via-yellow-200 to-green-300 text-gray-900 antialiased pt-16">
+<body class="holi-body text-gray-900 antialiased pt-16">
 
     <!-- Navigation bar -->
-    <nav class="fixed w-full top-0 z-20 backdrop-blur-sm bg-white/30 shadow-md">
+    <nav class="nav-bar fixed w-full top-0 z-20">
         <div class="max-w-7xl mx-auto px-4 flex justify-between items-center h-16">
-            <a href="#" class="text-2xl font-extrabold text-white drop-shadow-lg">Holi Fest</a>
+            <a href="#" class="text-2xl font-extrabold text-white drop-shadow-lg tracking-tight nav-brand">Holi Fest</a>
             <button id="navToggle" class="md:hidden text-white focus:outline-none">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
@@ -33,29 +33,32 @@
     </nav>
 
     <!-- Hero Section -->
-    <header class="hero bg-cover bg-center relative" style="background-image:url('https://source.unsplash.com/1600x900/?holi,colors');">
-        <div class="absolute inset-0 bg-black/50"></div>
-        <div class="relative z-10 max-w-xl">
-            <h1 class="text-4xl md:text-6xl font-extrabold mb-4 opacity-0 bg-gradient-to-r from-pink-400 to-yellow-400 bg-clip-text text-transparent" id="heroTitle">Nalgonda Biggest Rang</h1>
-            <p class="text-lg md:text-2xl mb-8 opacity-0 text-white" id="heroTagline">A celebration of colors &amp; music</p>
-            <div class="space-x-4">
-              <a href="https://link.district.in/DSTRKT/nb9gcdto" class="btn-primary animate-pulse" id="bookTickets" target="_blank" rel="noopener noreferrer">Book Tickets</a>
+    <header class="hero relative" style="background-image:url('https://source.unsplash.com/1600x900/?holi,colors');">
+        <div class="hero-overlay"></div>
+        <div class="hero-dots" aria-hidden="true"></div>
+        <div class="relative z-10 max-w-2xl mx-auto px-4">
+            <span class="hero-badge opacity-0" id="heroBadge">March 3, 2026</span>
+            <h1 class="hero-title text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold mb-4 opacity-0" id="heroTitle">Nalgonda Biggest Rang</h1>
+            <p class="text-lg md:text-2xl mb-8 opacity-0 text-white/95 font-medium tracking-wide" id="heroTagline">A celebration of colors &amp; music</p>
+            <div class="flex flex-wrap gap-4 justify-center">
+              <a href="https://link.district.in/DSTRKT/nb9gcdto" class="btn-primary" id="bookTickets" target="_blank" rel="noopener noreferrer">Book Tickets</a>
               <a href="#about" class="btn-secondary">Learn More</a>
             </div>
         </div>
-        <!-- decorative splashes -->
         <div class="splash splash1"></div>
         <div class="splash splash2"></div>
         <div class="splash splash3"></div>
     </header>
-    <!-- Hero wave transition -->
-    <svg class="w-full" viewBox="0 0 1440 100" xmlns="http://www.w3.org/2000/svg"><path fill="#ffffff" d="M0,0 C480,100 960,0 1440,100 L1440,0 L0,0 Z"></path></svg>
+    <!-- Hero wave -->
+    <div class="hero-wave-wrap">
+      <svg class="hero-wave" viewBox="0 0 1440 120" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"><path fill="currentColor" d="M0,64 C360,120 720,0 1080,64 C1260,96 1380,80 1440,64 L1440,120 L0,120 Z"></path></svg>
+    </div>
 
     <!-- About Section -->
-    <section class="py-16 px-6 bg-white animate-on-scroll" id="about">
+    <section class="section section-light animate-on-scroll" id="about">
         <div class="max-w-3xl mx-auto text-center">
-            <h2 class="text-2xl font-bold mb-4">About the Event</h2>
-            <p class="text-base leading-relaxed">
+            <h2 class="section-heading">About the Event</h2>
+            <p class="text-base md:text-lg leading-relaxed text-gray-700">
                 Join us for the most vibrant Holi celebration of the year. Embrace the splash of colors, dance to
                 lively beats and enjoy a festive atmosphere filled with joy and togetherness. The air will be
                 charged with music, laughter and the spirit of celebration.
@@ -64,99 +67,88 @@
     </section>
 
     <!-- Highlights Section -->
-    <section class="py-16 px-6 animate-on-scroll" id="highlights">
-        <div class="max-w-4xl mx-auto">
-            <h2 class="text-2xl font-bold text-center mb-8">Event Highlights</h2>
-            <div class="grid gap-6 md:grid-cols-2">
-                <div class="highlight-card flex items-center space-x-4">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-pink-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                    <h3 class="font-semibold">Open air celebration</h3>
+    <section class="section section-alt animate-on-scroll" id="highlights">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="section-heading text-center mb-10">Event Highlights</h2>
+            <div class="grid gap-5 sm:gap-6 md:grid-cols-2">
+                <div class="highlight-card highlight-card-1">
+                    <span class="highlight-icon"><svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg></span>
+                    <h3 class="font-semibold text-gray-800">Open air celebration</h3>
                 </div>
-                <div class="highlight-card flex items-center space-x-4">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-pink-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-6a3 3 0 00-6 0v6M21 17v-6a3 3 0 00-6 0v6M5 11h14"/></svg>
-                    <h3 class="font-semibold">Live DJ &amp; band</h3>
+                <div class="highlight-card highlight-card-2">
+                    <span class="highlight-icon"><svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-6a3 3 0 00-6 0v6M21 17v-6a3 3 0 00-6 0v6M5 11h14"/></svg></span>
+                    <h3 class="font-semibold text-gray-800">Live DJ &amp; band</h3>
                 </div>
-                <div class="highlight-card flex items-center space-x-4">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-pink-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 1.79-3 4s1.343 4 3 4 3-1.79 3-4-1.343-4-3-4z"/></svg>
-                    <h3 class="font-semibold">Food &amp; festive vibes</h3>
+                <div class="highlight-card highlight-card-3">
+                    <span class="highlight-icon"><svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 1.79-3 4s1.343 4 3 4 3-1.79 3-4-1.343-4-3-4z"/></svg></span>
+                    <h3 class="font-semibold text-gray-800">Food &amp; festive vibes</h3>
                 </div>
-                <div class="highlight-card flex items-center space-x-4">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-pink-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h4l3 9 4-18 3 9h4"/></svg>
-                    <h3 class="font-semibold">Unlimited colors</h3>
+                <div class="highlight-card highlight-card-4">
+                    <span class="highlight-icon"><svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h4l3 9 4-18 3 9h4"/></svg></span>
+                    <h3 class="font-semibold text-gray-800">Unlimited colors</h3>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Schedule Section -->
-    <section class="py-16 px-6 animate-on-scroll" id="schedule">
-        <div class="max-w-3xl mx-auto text-center">
-            <h2 class="text-2xl font-bold mb-4">Event Schedule</h2>
-            <p class="mb-6 font-medium">March 3 | 9 AM–2 PM<br>NG College, Nalgonda (Hyderabad Road)</p>
-            <ul class="space-y-8">
-                <li class="schedule-item flex items-center justify-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-pink-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3"/></svg>
-                    <span class="font-semibold">9:00 AM</span> - Gates open &amp; welcome colors
+    <section class="section section-light animate-on-scroll" id="schedule">
+        <div class="max-w-2xl mx-auto text-center">
+            <h2 class="section-heading mb-2">Event Schedule</h2>
+            <p class="text-gray-600 font-medium mb-10">March 3 · 9 AM – 2 PM<br><span class="text-gray-800">NG College, Nalgonda (Hyderabad Road)</span></p>
+            <ul class="schedule-list">
+                <li class="schedule-item">
+                    <span class="schedule-time">9:00 AM</span>
+                    <span class="schedule-desc">Gates open &amp; welcome colors</span>
                 </li>
-                <li class="schedule-item flex items-center justify-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-pink-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10m-5 4v4"/></svg>
-                    <span class="font-semibold">11:00 AM</span> - Live DJ set begins
+                <li class="schedule-item">
+                    <span class="schedule-time">11:00 AM</span>
+                    <span class="schedule-desc">Live DJ set begins</span>
                 </li>
-                <li class="schedule-item flex items-center justify-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-pink-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
-                    <span class="font-semibold">1:00 PM</span> - Color war &amp; food stalls
+                <li class="schedule-item">
+                    <span class="schedule-time">1:00 PM</span>
+                    <span class="schedule-desc">Color war &amp; food stalls</span>
                 </li>
-                <li class="schedule-item flex items-center justify-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-pink-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                    <span class="font-semibold">2:00 PM</span> - Closing ceremony &amp; thank you
+                <li class="schedule-item">
+                    <span class="schedule-time">2:00 PM</span>
+                    <span class="schedule-desc">Closing ceremony &amp; thank you</span>
                 </li>
             </ul>
         </div>
     </section>
 
     <!-- Gallery Section -->
-    <section class="py-16 px-6 bg-white animate-on-scroll" id="gallery">
-        <div class="max-w-4xl mx-auto text-center">
-            <h2 class="text-2xl font-bold mb-8">Gallery</h2>
-            <div class="grid gap-4 grid-cols-2 md:grid-cols-3">
-                <div class="gallery-item bg-gray-100 h-40 rounded-lg">
-                    <img src="assets/holi1.jpg" alt="Holi photo" class="w-full h-full object-cover rounded-lg" />
-                </div>
-                <div class="gallery-item bg-gray-100 h-40 rounded-lg">
-                    <img src="assets/holi2.jpg" alt="Holi photo" class="w-full h-full object-cover rounded-lg" />
-                </div>
-                <div class="gallery-item bg-gray-100 h-40 rounded-lg">
-                    <img src="assets/holi3.jpg" alt="Holi photo" class="w-full h-full object-cover rounded-lg" />
-                </div>
-                <div class="gallery-item bg-gray-100 h-40 rounded-lg">
-                    <img src="assets/holi4.jpg" alt="Holi photo" class="w-full h-full object-cover rounded-lg" />
-                </div>
-                <div class="gallery-item bg-gray-100 h-40 rounded-lg">
-                    <img src="assets/holi1.jpg" alt="Holi photo" class="w-full h-full object-cover rounded-lg" />
-                </div>
-                <div class="gallery-item bg-gray-100 h-40 rounded-lg">
-                    <img src="assets/holi2.jpg" alt="Holi photo" class="w-full h-full object-cover rounded-lg" />
-                </div>
+    <section class="section section-alt animate-on-scroll" id="gallery">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="section-heading text-center mb-10">Gallery</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item"><img src="assets/holi1.jpg" alt="Holi celebration" /></div>
+                <div class="gallery-item"><img src="assets/holi2.jpg" alt="Holi colors" /></div>
+                <div class="gallery-item"><img src="assets/holi3.jpg" alt="Holi fest" /></div>
+                <div class="gallery-item"><img src="assets/holi4.jpg" alt="Holi vibes" /></div>
+                <div class="gallery-item"><img src="assets/holi1.jpg" alt="Holi celebration" /></div>
+                <div class="gallery-item"><img src="assets/holi2.jpg" alt="Holi colors" /></div>
             </div>
         </div>
     </section>
 
     <!-- Organizer Section -->
-    <section class="py-12 px-6 bg-white animate-on-scroll" id="organizer">
+    <section class="section section-light animate-on-scroll" id="organizer">
         <div class="max-w-3xl mx-auto text-center">
-            <!-- Place GKI logo image in assets/gki_logo.png relative to project root -->
-            <img src="assets/gki_logo.png" alt="GKI Events & Travels logo" class="mx-auto mb-4 h-20 object-contain">
-            <p class="text-lg">Organised by GKI Events &amp; Travels</p>
+            <div class="organizer-logo-wrap">
+                <img src="assets/gki_logo.png" alt="GKI Events & Travels logo" class="organizer-logo">
+            </div>
+            <p class="text-lg font-medium text-gray-700">Organised by <span class="text-gray-900 font-semibold">GKI Events &amp; Travels</span></p>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="py-6 text-center text-sm bg-gradient-to-r from-pink-300 via-yellow-200 to-green-300">
-        <p class="mb-2">Nalgonda Biggest Rang – Holi Fest 2026 &mdash; Organised by GKI Events &amp; Travels</p>
-        <div class="space-x-4">
-            <a href="#" class="text-white hover:text-gray-200">Facebook</a>
-            <a href="#" class="text-white hover:text-gray-200">Instagram</a>
-            <a href="#" class="text-white hover:text-gray-200">Twitter</a>
+    <footer class="footer">
+        <p class="footer-credit">Nalgonda Biggest Rang – Holi Fest 2026 · GKI Events &amp; Travels</p>
+        <div class="footer-social">
+            <a href="#" class="footer-social-link" aria-label="Facebook">Facebook</a>
+            <a href="#" class="footer-social-link" aria-label="Instagram">Instagram</a>
+            <a href="#" class="footer-social-link" aria-label="Twitter">Twitter</a>
         </div>
     </footer>
 
@@ -215,16 +207,14 @@
             observer.observe(el);
         });
 
-        // animate hero text on load
+        // animate hero on load
         window.addEventListener('load', () => {
+            const badge = document.getElementById('heroBadge');
             const title = document.getElementById('heroTitle');
             const tagline = document.getElementById('heroTagline');
-            if (title && tagline) {
-                title.classList.remove('opacity-0');
-                title.classList.add('animate-fade-in-up');
-                tagline.classList.remove('opacity-0');
-                tagline.classList.add('animate-fade-in-up', 'delay-200');
-            }
+            if (badge) { badge.classList.remove('opacity-0'); badge.classList.add('animate-fade-in-up'); }
+            if (title) { title.classList.remove('opacity-0'); title.classList.add('animate-fade-in-up', 'delay-150'); }
+            if (tagline) { tagline.classList.remove('opacity-0'); tagline.classList.add('animate-fade-in-up', 'delay-300'); }
         });
     </script>
 </body>
